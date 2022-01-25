@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/allPost"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/favourites"
+        android:icon="@drawable/ic_baseline_star_24"
+        android:title="@string/favourites" />
+
+    <item
+        android:id="@+id/addPost"
+        android:icon="@drawable/ic_baseline_post_add_24"
+        android:title="@string/add" />
+</menu>

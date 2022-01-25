@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SimpleBlogApp</string>
+    <string name="title">Title:</string>
+    <string name="post_body">Post Body</string>
+    <string name="user">User:</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">NAME</string>
+    <string name="email">EMAIL</string>
+    <string name="body">Body: </string>
+    <string name="comments">COMMENTS</string>
+    <string name="comment">Type Comment</string>
+    <string name="post">Post</string>
+    <string name="no_posts_to_show">No Posts to Show</string>
+    <string name="Send">send</string>
+    <string name="home">Home</string>
+    <string name="add">Add Post</string>
+    <string name="error_no_network_connection">Error: No Network Connection</string>
+    <string name="id_12">User Id: 12</string>
+    <string name="name_shak_mweltok">Name: Shak Mweltok</string>
+    <string name="search">Search</string>
+    <string name="favourites">Favourites</string>
+</resources>

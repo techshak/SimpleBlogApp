@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/blog_nav_graph"
+    app:startDestination="@id/allPost">
+
+
+    <fragment
+        android:id="@+id/allPost"
+        android:name="com.olamachia.simpleblogappwithdatabinding.view.ui.fragments.allpost.AllPostFragment"
+        android:label="all_post_fragment"
+        tools:layout="@layout/all_post_fragment" >
+        <action
+            android:id="@+id/action_allPostFragment_to_singlePostFragment"
+            app:destination="@id/singlePostFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/singlePostFragment"
+        android:name="com.olamachia.simpleblogappwithdatabinding.view.ui.fragments.singlepost.SinglePostFragment"
+        android:label="single_post_fragment"
+        tools:layout="@layout/single_post_fragment" >
+        <argument
+            android:name="post"
+            app:argType="com.olamachia.simpleblogappwithdatabinding.models.dataclasses.Post" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPost"
+        android:name="com.olamachia.simpleblogappwithdatabinding.view.ui.fragments.addpost.AddPostFragment"
+        android:label="add_post_fragment"
+        tools:layout="@layout/add_post_fragment" >
+        <action
+            android:id="@+id/action_addPost_to_allPost"
+            app:destination="@id/allPost" />
+    </fragment>
+    <fragment
+        android:id="@+id/favourites"
+        android:name="com.olamachia.simpleblogappwithdatabinding.view.ui.fragments.favourites.FavouritesFragment"
+        android:label="favourites_fragment"
+        tools:layout="@layout/favourites_fragment" >
+        <action
+            android:id="@+id/action_favourites_to_singlePostFragment"
+            app:destination="@id/singlePostFragment" />
+    </fragment>
+</navigation>

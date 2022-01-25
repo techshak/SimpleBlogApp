@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.fragments.singlepost.SinglePostFragment">
+
+    <TextView
+        android:id="@+id/singlePostTitle"
+        android:layout_width="@dimen/size_dp_0"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:fontFamily="@font/abril_fatface"
+        android:padding="@dimen/text_dp_10"
+        android:text="@string/title"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_sp_30"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/sharePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_share_24"
+        app:layout_constraintBottom_toBottomOf="@+id/singlePostTitle"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8" />
+
+    <TextView
+        android:id="@+id/singlePostBody"
+        android:layout_width="@dimen/size_dp_0"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:padding="@dimen/text_dp_5"
+        android:text="@string/body"
+        app:layout_constraintTop_toBottomOf="@+id/singlePostTitle"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7" />
+
+    <TextView
+        android:id="@+id/commentsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comments"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_sp_20"
+        android:padding="@dimen/text_dp_5"
+        android:textColor="@color/oxblood"
+        app:layout_constraintStart_toStartOf="@+id/singlePostBody"
+        app:layout_constraintTop_toBottomOf="@+id/singlePostBody" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postComments_rv"
+        android:layout_width="@dimen/size_dp_0"
+        android:layout_height="@dimen/size_dp_0"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/sendComment"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/commentsTitle" />
+
+
+    <ProgressBar
+        android:id="@+id/commentProgressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/postComments_rv"
+        app:layout_constraintEnd_toEndOf="@+id/postComments_rv"
+        app:layout_constraintStart_toStartOf="@+id/postComments_rv"
+        app:layout_constraintTop_toTopOf="@+id/postComments_rv" />
+
+    <EditText
+        android:id="@+id/addComment_et"
+        android:layout_width="@dimen/size_dp_0"
+        android:layout_height="@dimen/size_dp_0"
+        android:background="@color/ash"
+        android:hint="@string/comment"
+        android:padding="@dimen/text_dp_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendComment"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/sendComment" />
+
+
+    <Button
+        android:id="@+id/sendComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/oxblood"
+        android:text="@string/Send"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8" />
+
+    <ImageView
+        android:id="@+id/likePostIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_star_24"
+        app:layout_constraintBottom_toTopOf="@+id/singlePostBody"
+        app:layout_constraintEnd_toStartOf="@+id/sharePost" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
